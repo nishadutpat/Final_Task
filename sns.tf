@@ -1,11 +1,5 @@
 
 
-
-
-
-
-
-
 resource "aws_sns_topic" "email_notifications" {
   name = "email-notifications"
 }
