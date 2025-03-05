@@ -17,7 +17,7 @@ resource "aws_cloudwatch_event_rule" "s3_event_rule_gdtc" {
 }
 EOF
 }
-resource "aws_cloudwatch_event_target" "trigger_step_function" {
+resource "aws_cloudwatch_event_target" "trigger_step_function_gdtc" {
   rule      = aws_cloudwatch_event_rule.s3_event_rule_gdtc.name
   arn       = aws_sfn_state_machine.first_step_function_gdtc.arn
   role_arn  = aws_iam_role.eventbridge_role_gdtc.arn
@@ -51,7 +51,7 @@ resource "aws_iam_policy" "eventbridge_step_function_policy_gdtc" {
       {
         Effect   = "Allow"
         Action   = "states:StartExecution"
-        Resource = aws_sfn_state_machine.first_step_function_gdtc.arn
+        Resource = "arn:aws:states:ap-south-1:703671922793:stateMachine:first-step-function-gdtc"
       }
     ]
   })
