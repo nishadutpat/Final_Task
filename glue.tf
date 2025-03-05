@@ -49,8 +49,8 @@ resource "aws_iam_policy" "glue_policy_gdtc" {
         Effect   = "Allow",
         Action   = ["s3:GetObject", "s3:ListBucket"],
         Resource = [
-          "arn:aws:s3:::data-buck-finaltask",
-          "arn:aws:s3:::data-buck-finaltask/*"
+          "arn:aws:s3:::final-task-gdtc",
+          "arn:aws:s3:::final-task-gdtc/*"
         ]
       },
       {
