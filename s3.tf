@@ -10,3 +10,4 @@ resource "aws_s3_bucket" "athena-finaltask" {
   bucket = "athena-finaltask"
 }
 
+
