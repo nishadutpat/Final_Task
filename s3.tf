@@ -11,3 +11,7 @@ resource "aws_s3_bucket" "athena-finaltask" {
 }
 
 
+resource "aws_s3_bucket" "backend-terraform" {
+  bucket = "terraform-backend-buck"
+}
+
